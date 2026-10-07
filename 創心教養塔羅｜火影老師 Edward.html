@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>創心教養塔羅｜火影老師 Edward</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf6ea;--ink:#2e2147;--mute:#6b5f80;--purple:#5b3f8c;--gold:#b88a2e;--red:#9c1c24;--card:#fffaf0;--line:#e4d6b5;--hero:#2e2147;--heroink:#fbf6ea;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#18122a;--ink:#f3ead6;--mute:#b9aed0;--purple:#b79bf0;--gold:#e0b956;--red:#e5646b;--card:#241b3a;--line:#43366a;--hero:#0f0a1d;--heroink:#f3ead6}}
+:root[data-theme="dark"]{--bg:#18122a;--ink:#f3ead6;--mute:#b9aed0;--purple:#b79bf0;--gold:#e0b956;--red:#e5646b;--card:#241b3a;--line:#43366a;--hero:#0f0a1d;--heroink:#f3ead6}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.8 "Noto Sans TC","PingFang TC",sans-serif}
+h1,h2,h3{font-family:"Noto Serif TC","Songti TC",serif;line-height:1.35;margin:0}
+section{padding:56px 22px;max-width:880px;margin:0 auto}
+h2{font-size:26px;font-weight:900;margin-bottom:12px}
+p{margin:0 0 12px;max-width:34em}
+a{color:inherit}
+.hero{background:var(--hero);color:var(--heroin,var(--heroink));text-align:center;padding:48px 22px 64px;position:relative;overflow:hidden}
+.hero svg.lotus{width:150px;height:auto;display:block;margin:0 auto 18px}
+.hero h1{font-size:34px;font-weight:900;letter-spacing:.02em}
+.hero .brand{color:var(--gold);font-family:"Noto Serif TC",serif;letter-spacing:.3em;margin-bottom:10px;font-size:14px}
+.hero p{margin:14px auto 24px;opacity:.88}
+.btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;text-decoration:none;font-weight:500;border:1.5px solid var(--gold)}
+.btn.main{background:var(--gold);color:#241638}
+.btn.ghost{color:inherit}
+.iceberg{display:grid;grid-template-columns:1fr;gap:0;margin-top:20px;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.iceberg div{padding:16px 18px}
+.iceberg .top{background:var(--card)}
+.iceberg .low{background:var(--purple);color:#fff}
+.iceberg b{font-family:"Noto Serif TC",serif}
+.deck{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+.tc{perspective:900px;aspect-ratio:3/4.6;cursor:pointer;border:0;background:none;padding:0;font:inherit;color:inherit}
+.tc:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:14px}
+.tc .in{position:relative;width:100%;height:100%;transition:transform .6s;transform-style:preserve-3d}
+.tc.on .in{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;border-radius:14px;border:2px solid var(--gold);padding:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:var(--card)}
+.front{background:linear-gradient(160deg,#3a2766,#1c1233);color:#f3ead6}
+.front svg{width:64px;height:64px;margin-bottom:10px}
+.front small{color:var(--gold);letter-spacing:.2em}
+.back{transform:rotateY(180deg);justify-content:flex-start;padding:14px 10px;font-size:13px;line-height:1.55;overflow:auto}
+.back h3{font-size:15px;color:var(--purple);margin-bottom:2px}
+.back em{font-style:normal;color:var(--red);font-weight:500;display:block;margin-top:6px}
+.tag{font-size:12px;color:var(--mute);margin-bottom:6px}
+.note{font-size:13px;color:var(--mute);margin-top:12px}
+.report{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.report>div{max-width:880px;margin:0 auto;padding:56px 22px}
+.steps{display:grid;gap:12px;margin:16px 0 22px}
+.steps div{border-left:3px solid var(--gold);padding:4px 14px}
+.steps b{font-family:"Noto Serif TC",serif}
+.tools{display:grid;gap:12px;margin-top:16px}
+.tool{border:1px solid var(--line);border-radius:14px;padding:16px 18px;background:var(--card)}
+.tool h3{font-size:18px;margin-bottom:4px}
+.tool:nth-child(odd){border-left:4px solid var(--purple)}
+.tool:nth-child(even){border-left:4px solid var(--red)}
+.story{background:linear-gradient(135deg,#7a1520,#4a0e1c);color:#fbefd9;border-radius:0}
+.story .w{max-width:880px;margin:0 auto;padding:56px 22px}
+.story h2{color:#f2cf7a}
+.quote{font-family:"Noto Serif TC",serif;font-size:21px;line-height:1.7;max-width:22em;margin-bottom:16px}
+.foot{text-align:center;background:var(--hero);color:var(--heroink);padding:56px 22px 48px}
+.foot p{margin:0 auto 14px}
+.foot .end{font-family:"Noto Serif TC",serif;font-size:15px;opacity:.85;max-width:28em;border-top:1px solid #ffffff33;padding-top:18px;margin-top:26px}
+@media(min-width:720px){.deck{grid-template-columns:repeat(4,1fr)}.tools{grid-template-columns:1fr 1fr}.iceberg{grid-template-columns:1fr 1fr}.hero h1{font-size:46px}}
+@media(prefers-reduced-motion:reduce){.tc .in{transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+<svg class="lotus" viewBox="0 0 200 150" aria-hidden="true">
+<circle cx="100" cy="72" r="64" fill="none" stroke="#b88a2e" stroke-width="2.5" stroke-dasharray="300 100"/>
+<path d="M100 20c14 18 16 40 0 62-16-22-14-44 0-62z" fill="#8a6bc0"/>
+<path d="M100 82C70 74 50 52 44 40c22 2 44 16 56 42zM100 82c30-8 50-30 56-42-22 2-44 16-56 42z" fill="#6a4aa3"/>
+<path d="M100 88C62 92 34 80 20 66c28-2 56 6 80 22zM100 88c38 4 66-8 80-22-28-2-56 6-80 22z" fill="#4c3380"/>
+<path d="M100 104c-14-4-22-12-16-20 6-6 12-2 16 4 4-6 10-10 16-4 6 8-2 16-16 20z" fill="#d9b04c"/>
+<path d="M100 22l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#e0b956"/>
+</svg>
+<div class="brand">創心教養塔羅</div>
+<h1>孩子不是不想學，<br>只是動力的開關被卡住了。</h1>
+<p>專門陪伴「學不動、不想學、卡關中」的孩子。用創意、音樂與遊戲化機制，把挫折感轉成通關的成就感。</p>
+<div class="btns"><a class="btn main" href="#oracle">先做動力狀態快篩</a><a class="btn ghost" href="#contact">預約冰山檢測</a></div>
+</header>
+
+<section id="iceberg">
+<h2>「學不動」只是水面上的冰山一角</h2>
+<p>孩子拖延、分心，或說「我討厭英文」時，責罵解決不了問題。多數時候不是能力不夠，而是心裡有還沒被看見的卡點。</p>
+<div class="iceberg">
+<div class="top"><b>水面上</b><br>拖延、分心、不想開口、「我討厭英文」</div>
+<div class="low"><b>水面下</b><br>找不到夥伴的樂趣、害怕再失敗、能量已經超載、進度跟不上</div>
+</div>
+</section>
+
+<section id="oracle">
+<h2>卡點雷達：孩子現在是哪種狀態？</h2>
+<p>點一張牌，翻開行為背後的求救訊號與對應的破局方法。</p>
+<div class="deck">
+
+<button class="tc" aria-label="翻開第一張牌">
+<div class="in">
+<div class="face front"><svg viewBox="0 0 64 64" fill="none" stroke="#e0b956" stroke-width="2.5"><path d="M18 14h28v10c0 10-6 16-14 16S18 34 18 24zM32 40v10M22 52h20M18 18h-6c0 8 4 10 6 10M46 18h6c0 8-4 10-6 10"/></svg><b>聖杯三</b><small>正位</small></div>
+<div class="face back"><div class="tag">孤單厭戰型</div><h3>「一個人死背太無聊了」</h3>想和大家一起冒險。只有單向灌輸與獨自刷題，動力會停擺。<em>破局：小隊通關。用桌遊、卡牌對決與雙向互動取代說教。</em></div>
+</div></button>
+
+<button class="tc" aria-label="翻開第二張牌">
+<div class="in">
+<div class="face front"><svg viewBox="0 0 64 64" fill="none" stroke="#e0b956" stroke-width="2.5"><path d="M32 8v6M24 20h16l4 8H20zM22 28h20v16H22zM28 44v10h8V44M32 32v8"/></svg><b>隱者</b><small>正位</small></div>
+<div class="face back"><div class="tag">受挫防禦型</div><h3>「不開始，就不會失敗」</h3>外表冷漠、略過不讀，內在是高敏感與完美主義的自我保護。<em>破局：《歌聲裡的文法》。用喜愛的音樂共鳴化解防線。</em></div>
+</div></button>
+
+<button class="tc" aria-label="翻開第三張牌">
+<div class="in">
+<div class="face front"><svg viewBox="0 0 64 64" fill="none" stroke="#e0b956" stroke-width="2.5"><circle cx="32" cy="34" r="16"/><path d="M32 18v32M16 34h32M20 22l24 24M44 22L20 46" opacity=".5"/><path d="M26 10l6 6 6-6"/></svg><b>金幣侍者</b><small>逆位</small></div>
+<div class="face back"><div class="tag">浮躁渙散型</div><h3>「想變強，但基本功好枯燥」</h3>目標很大、腳步虛浮，翻開書五分鐘就神遊。<em>破局：《發音大魔王剋星》。把拼讀拆成三分鐘打怪小關卡。</em></div>
+</div></button>
+
+<button class="tc" aria-label="翻開第四張牌">
+<div class="in">
+<div class="face front"><svg viewBox="0 0 64 64" fill="none" stroke="#e0b956" stroke-width="2.5"><path d="M10 22h14l4 8-4 8H10M54 42H40l-4-8 4-8h14M24 30h16"/><circle cx="32" cy="14" r="4"/></svg><b>節制</b><small>逆位</small></div>
+<div class="face back"><div class="tag">臨界失調型</div><h3>「很努力了，但大腦塞車」</h3>輸入與輸出失衡，卡在進化前夕，開始自我懷疑。<em>破局：《私校期中考訂製庫》。減負聚焦，靶向調和弱點。</em></div>
+</div></button>
+
+</div>
+<p class="note">牌面為原創示意圖樣；實際解牌以一對一諮詢為準。占卜用於引導對話，不取代專業醫療或心理評估。</p>
+</section>
+
+<div class="report"><div id="report">
+<h2>不只是占卜：卡點浮現冰山報告書</h2>
+<p>用牌卡降低防備，讓孩子自然說出學習心聲，再整理成一份能執行的個人處方。</p>
+<div class="steps">
+<div><b>抽牌投射</b><br>孩子透過牌卡說出平常說不出口的感受。</div>
+<div><b>四維度拆解</b><br>技巧盲區、意願枯竭、挫折逃避、進度落差。</div>
+<div><b>個人化處方簽</b><br>專屬的學習節奏與破關策略。</div>
+</div>
+<a class="btn main" href="#contact" style="color:#241638">預約深度卡點諮詢</a>
+</div></div>
+
+<section id="tools">
+<h2>專為擊破卡點研發的教材庫</h2>
+<div class="tools">
+<div class="tool"><h3>卡點浮現冰山報告書</h3>動力與心理障礙的精準掃描。</div>
+<div class="tool"><h3>歌聲裡的文法</h3>用流行歌曲旋律，把複雜句型自然記進腦裡。</div>
+<div class="tool"><h3>發音大魔王剋星</h3>口腔練習遊戲化，解決不敢開口。</div>
+<div class="tool"><h3>私校期中考訂製庫</h3>針對超前進度與刁鑽題型的靶向題庫。</div>
+</div>
+</section>
+
+<div class="story"><div class="w">
+<h2>創作者的信念</h2>
+<div class="quote">只要能讓孩子願意開口，我願意去學世界上所有的好方法。</div>
+<p>傳統教學常說「你不夠用功」。我相信沒有不愛學習的孩子，只有用錯了激勵方式。牌卡、音樂、私校專屬拆解，每一樣教材都是為了某位學生眼前的「學不動」而誕生。</p>
+<p>我是火影老師 Edward，創心教養塔羅的創辦人，也是陪你一起找新解法的搭檔。</p>
+</div></div>
+
+<footer class="foot" id="contact">
+<h2>今天就解開動力的結</h2>
+<p>陪孩子找回自己進化的節奏。想先聊聊孩子的學習狀態，歡迎私訊。</p>
+<div class="btns"><a class="btn main" href="https://www.instagram.com/GN1288176">Instagram @GN1288176</a><a class="btn ghost" href="https://lin.ee/RzTevUc">LINE 官方帳號預約</a></div>
+<p class="end">孩子需要同行的夥伴、解開心結的契機、踩穩腳步的踏板，也需要體內能量流動平衡的那一刻。看懂冰山底層的訊號，學習就不再是壓迫，而是一段水到渠成的進化旅程。</p>
+</footer>
+
+<script>
+document.querySelectorAll('.tc').forEach(function(b){b.addEventListener('click',function(){b.classList.toggle('on')})});
+</script>
+</body>
+</html>
